@@ -116,9 +116,7 @@
     transition: border-color 0.3s;
 }
 
-.color-option:hover {
-    border-color: #aaa; /* Highlight color on hover */
-}
+
 
 .color-option.selected {
     border-color: #ff6600; /* Highlight color for selected */

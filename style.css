@@ -108,6 +108,10 @@ body {
     font-size: var(--font-size-5xl);
     line-height: 120%;
 }
+.H5 {
+    font-size: var(--font-size-3xl);
+    line-height: 120%;
+}
 .H6 {
     font-size: var(--font-size-2xl);
     line-height: 120%;
