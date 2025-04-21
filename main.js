@@ -1,6 +1,4 @@
-// import "./header";
-// mobile drawer
-
+// Toggle mobile menu and drawer visibility
 const menuToggle = document.getElementById("menu-toggle");
 const drawer = document.getElementById("mobile-drawer");
 const overlay = document.getElementById("drawer-overlay");
@@ -19,59 +17,17 @@ function closeDrawer() {
 closeBtn.addEventListener("click", closeDrawer);
 overlay.addEventListener("click", closeDrawer);
 
+// Handle color option selection
 const colorOptions = document.querySelectorAll(".color-option");
 
 colorOptions.forEach((option) => {
     option.addEventListener("click", () => {
-        // Remove selected class from all options
         colorOptions.forEach((opt) => opt.classList.remove("selected"));
-
-        // Add selected class to the clicked option
         option.classList.add("selected");
     });
 });
 
-//add to cart
-
-// const images = ["/images/p3.png", "/images/p2.png", "/images/p4.png", "/images/p3.png"];
-
-// const tabContainer = document.getElementById("tabContainer");
-// const tabImage = document.getElementById("tabImage");
-
-// function createTabs() {
-//     images.forEach((img, index) => {
-//         const tab = document.createElement("img");
-//         tab.src = img;
-//         tab.alt = "tab";
-
-//         tab.className = "tab-button";
-//         tab.dataset.index = index;
-
-//         tab.addEventListener("click", () => {
-//             updateActiveTab(index);
-//         });
-
-//         tabContainer.appendChild(tab);
-//     });
-// }
-
-// function updateActiveTab(index) {
-//     tabImage.style.opacity = 0;
-
-//     setTimeout(() => {
-//         tabImage.src = images[index];
-//         tabImage.style.opacity = 1;
-//     }, 150);
-
-//     const buttons = document.querySelectorAll(".tab-button");
-//     buttons.forEach((btn, i) => {
-//         btn.classList.toggle("active", i === index);
-//     });
-// }
-
-// // Initialize
-// createTabs();
-
+// Create image tabs with active state
 export function createImageTabs(wrapperClass, images, activeClass = "active", tabClass = "tab-button") {
     const wrapper = document.querySelector(`.${wrapperClass}`);
     if (!wrapper || !images?.length) return;
@@ -112,34 +68,26 @@ export function createImageTabs(wrapperClass, images, activeClass = "active", ta
         });
     }
 
-    updateActiveTab(0); // default selected
+    updateActiveTab(0);
 }
 
+// Initialize image tabs for different sections
 const images1 = ["/images/p3.png", "/images/p2.png", "/images/p4.png", "/images/p3.png"];
 const images2 = ["/images/Item → Img.png", "/images/p2.png", "/images/p4.png", "/images/p3.png", "/images/Item → Img.png"];
 
-// Custom active class names for each section
 const activeClass1 = "active-tab1";
 const activeClass2 = "active-tab2";
-
-// const tab1 = "tab1";
 const tab2 = "tab2";
 
-// Initialize the image tabs directly for each section
-createImageTabs("tabSection1", images1, activeClass1); // For first section
-createImageTabs("tabSection2", images2, activeClass2, tab2); // For second section
+createImageTabs("tabSection1", images1, activeClass1);
+createImageTabs("tabSection2", images2, activeClass2, tab2);
 
-// colaps
-
-// Select all FAQ items
+// Handle FAQ item toggle for displaying content
 const faqItems = document.querySelectorAll(".faq-item");
 
 faqItems.forEach((item) => {
     item.addEventListener("click", () => {
-        // Toggle the active class on the clicked item
         item.classList.toggle("active");
-
-        // Toggle the display of the content
         const content = item.querySelector(".faq-content");
         if (item.classList.contains("active")) {
             content.style.display = "block";
@@ -149,8 +97,7 @@ faqItems.forEach((item) => {
     });
 });
 
-// swiper
-
+// Initialize custom slider functionality with navigation buttons and autoplay
 function initCustomSlider(selector, cardsPerView = 1) {
     const sliders = document.querySelectorAll(selector);
 
@@ -166,12 +113,10 @@ function initCustomSlider(selector, cardsPerView = 1) {
         const maxIndex = Math.ceil(totalSlides / cardsPerView) - 1;
         let interval;
 
-        // Set dynamic slide width
         slides.forEach((slide) => {
             slide.style.flex = `0 0 ${100 / cardsPerView}%`;
         });
 
-        // Generate dots
         for (let i = 0; i <= maxIndex; i++) {
             const dot = document.createElement("button");
             dot.classList.add("dot");
@@ -200,7 +145,6 @@ function initCustomSlider(selector, cardsPerView = 1) {
             updateSlider();
         };
 
-        // Dot click
         dotsContainer.addEventListener("click", (e) => {
             if (e.target.classList.contains("dot")) {
                 currentIndex = parseInt(e.target.getAttribute("data-index"));
@@ -208,11 +152,9 @@ function initCustomSlider(selector, cardsPerView = 1) {
             }
         });
 
-        // Button click
         nextBtn.addEventListener("click", nextSlide);
         prevBtn.addEventListener("click", prevSlide);
 
-        // Auto play (optional)
         const startAutoPlay = () => {
             interval = setInterval(nextSlide, 4000);
         };
@@ -229,8 +171,7 @@ function initCustomSlider(selector, cardsPerView = 1) {
     });
 }
 
-// Initialize with cards per view
+// Initialize slider after DOM content is loaded
 document.addEventListener("DOMContentLoaded", () => {
-    // Example: Show 3 cards at once
     initCustomSlider(".custom-slider", 1);
 });

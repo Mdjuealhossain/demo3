@@ -65,6 +65,12 @@
     .content-wraper{
         align-items: center;
     }
+    .content-wraper h3, p{
+        text-align: center;
+    }
+    .gallery{
+       margin-bottom: 1rem;
+    }
 }  
 
 .gallery {  

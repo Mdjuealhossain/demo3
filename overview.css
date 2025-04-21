@@ -1,4 +1,4 @@
-@import "../src/style.css";
+@import "../style.css";
 .section {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* grid-cols-2 */
