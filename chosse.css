@@ -1,4 +1,4 @@
-@import "../src/style.css";
+@import "/style.css";
 .choose-header {
     max-width: 34.75rem;
     width: 100%;
@@ -84,7 +84,7 @@
     height: 25.5rem;
     border-radius: 8px;
     overflow: hidden;
-    background-image: url("/src/images/7ce2691f10514a66adfb63f38260c10a\ 1@2x.png");
+    background-image: url("/images/7ce2691f10514a66adfb63f38260c10a\ 1@2x.png");
     background-size: cover;
     background-position: center;
 }

@@ -33,7 +33,7 @@ colorOptions.forEach((option) => {
 
 //add to cart
 
-// const images = ["/src/images/p3.png", "/src/images/p2.png", "/src/images/p4.png", "/src/images/p3.png"];
+// const images = ["/images/p3.png", "/images/p2.png", "/images/p4.png", "/images/p3.png"];
 
 // const tabContainer = document.getElementById("tabContainer");
 // const tabImage = document.getElementById("tabImage");
@@ -115,8 +115,8 @@ export function createImageTabs(wrapperClass, images, activeClass = "active", ta
     updateActiveTab(0); // default selected
 }
 
-const images1 = ["/src/images/p3.png", "/src/images/p2.png", "/src/images/p4.png", "/src/images/p3.png"];
-const images2 = ["/src/images/Item → Img.png", "/src/images/p2.png", "/src/images/p4.png", "/src/images/p3.png", "/src/images/Item → Img.png"];
+const images1 = ["/images/p3.png", "/images/p2.png", "/images/p4.png", "/images/p3.png"];
+const images2 = ["/images/Item → Img.png", "/images/p2.png", "/images/p4.png", "/images/p3.png", "/images/Item → Img.png"];
 
 // Custom active class names for each section
 const activeClass1 = "active-tab1";
