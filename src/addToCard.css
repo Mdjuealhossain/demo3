@@ -1,0 +1,252 @@
+@import "../src/style.css";
+.cart-wraper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* grid-cols-2 */
+    gap: 4rem;
+}
+
+.star-wraper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 12px;
+}
+.rating-wraper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.rating span {
+    font-weight: 600;
+    margin-right: 8px;
+}
+
+.product-image {
+    flex: 1;
+    text-align: center;
+}
+
+.product-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-info h2 {
+    margin-bottom: 8px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #777;
+    font-weight: 400 !important;
+}
+
+.discount {
+    font-size: var(--font-size-xs) !important;
+    border-radius: 4px !important;
+    font-weight: 400 !important;
+}
+
+.description {
+    margin-bottom: 16px;
+    color: var(--color-black_500);
+}
+.description span {
+    font-size: var(--font-size-3xl) !important;
+    font-weight: 600;
+}
+
+.features {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* grid-cols-2 */
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.features div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.add-to-cart {
+    padding: 12px 20px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #cc5200;
+}
+
+.payment-options {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.color-options {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.color-option {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.color-option:hover {
+    border-color: #aaa; /* Highlight color on hover */
+}
+
+.color-option.selected {
+    border-color: #ff6600; /* Highlight color for selected */
+}
+
+/* kjnjk */
+.cart-section {
+    padding: 5.813rem 0;
+}
+
+/* dsvcsvd */
+.image-container {
+    width: 100%;
+    height: 605px;
+    margin-bottom: 24px;
+    overflow: hidden;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-warning_light);
+}
+
+.image-container img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tab-button {
+    height: 118px;
+    width: 118px;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.tab2 {
+    height: 58px;
+    width: 92px;
+    background-color: #e0e0e0;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.tab-button.active {
+    background-color: var(--color-warning_dark);
+}
+.tabSection2 {
+    margin-top: 24px;
+}
+
+.active-tab1 {
+    background-color: var(--color-warning_light);
+}
+
+/* Style for active tab in the second section */
+.active-tab2 {
+    border: 2px solid #000000;
+}
+
+.faq-container {
+    margin-top: 24px;
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--color-warning_light);
+    padding: 10px 12px;
+    cursor: pointer;
+    color: var(--color-gray_400);
+}
+
+.faq-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+}
+
+.faq-content {
+    display: none;
+    padding-top: 10px;
+    color: #555;
+    font-size: var(--font-size-sm) !important;
+}
+
+.faq-icon {
+    transition: transform 0.3s;
+    font-size: var(--font-size-sm) !important;
+}
+
+.active .faq-icon {
+    transform: rotate(180deg);
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .cart-section {
+        padding: 3rem 0;
+    }
+    .cart-wraper {
+        grid-template-columns: repeat(1, 1fr); /* grid-cols-2 */
+    }
+    .image-container {
+        height: 305px !important;
+    }
+    .tab-button {
+        height: 60px !important;
+        width: 60px !important;
+    }
+    .features {
+        grid-template-columns: repeat(1, 1fr); /* grid-cols-2 */
+    }
+}

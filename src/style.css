@@ -1,0 +1,148 @@
+@import url("../src/nav.css");
+@import url("../src/herro.css");
+@import url("../src/nav.css");
+@import url("../src/addToCard.css");
+@import url("../src/chosse.css");
+@import url("../src/overview.css");
+@import url("../src/plan.css");
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    /* Colors */
+    --color-paper: #ffffff;
+    --color-black: #000000;
+    --color-primary: #070707;
+    --color-secondary: #4a4c56;
+    --color-black-deep: #12151a;
+    /* --color-default: #1e40af;  */
+    --color-warning_extra_light: "#FFD0B0";
+    --color-warning_light: #ffd0b0;
+    --color-warning_main: #ff6600;
+    --color-warning_dark: #6b2b00;
+
+    --color-success: #22c55e;
+    --color-warning: #fbbf24;
+    --color-dark: #111827;
+    --color-light: #f9fafb;
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-black_800: #242a33;
+    --color-black_500: "#1D1F2C";
+    --color-gray_700: "#323B47";
+    --color-gray_400: "#4A4C56";
+    --color-gray_600: "#161721";
+
+    /* Font Sizes */
+    --font-size-xs: 0.75rem; /* 12px */
+    --font-size-sm: 0.875rem; /* 14px */
+    --font-size-base: 1rem; /* 16px */
+    --font-size-lg: 1.125rem; /* 18px */
+    --font-size-xl: 1.25rem; /* 20px */
+    --font-size-2xl: 1.5rem; /* 24px */
+    --font-size-3xl: 1.875rem; /* 30px */
+    --font-size-4xl: 2.25rem; /* 36px */
+    --font-size-40px: 2.5rem; /* 36px */
+    --font-size-5xl: 3rem; /* 48px */
+    --font-size-6xl: 64px; /* 64px */
+}
+
+/* Example Usage */
+body {
+    font-size: var(--font-size-base);
+    font-family: "Montserrat", sans-serif;
+    color: var(--color-dark);
+    background-color: var(--color-light);
+    line-height: 160%;
+}
+
+.container {
+    max-width: 1200px; /* Or use 76rem = 1216px */
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
+}
+
+.btn-warning {
+    background-color: var(--color-warning_main);
+    color: var(--color-white);
+    border-radius: 6.25rem;
+    text-decoration: none;
+}
+
+.btn-warning:hover {
+    background-color: var(--color-warning_dark);
+}
+
+.btn {
+    padding: 0.875rem 1.625rem;
+    font-size: var(--font-size-base);
+    line-height: 18px !important;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.body2 {
+    font-size: var(--font-size-sm);
+    line-height: 112.00000000000001% !important;
+}
+.H1 {
+    font-size: var(--font-size-6xl);
+    line-height: 120%;
+}
+.H3 {
+    font-size: var(--font-size-40px);
+    line-height: 120%;
+}
+.H2 {
+    font-size: var(--font-size-5xl);
+    line-height: 120%;
+}
+.H6 {
+    font-size: var(--font-size-2xl);
+    line-height: 120%;
+}
+.subtitle {
+    font-size: var(--font-size-sm);
+    line-height: 112.00000000000001% !important;
+}
+
+@media (max-width: 768px) {
+    .body2 {
+        font-size: var(--font-size-xs);
+        line-height: 112.00000000000001% !important;
+    }
+    .H1 {
+        font-size: var(--font-size-3xl);
+        line-height: 120%;
+    }
+    .H2 {
+        font-size: var(--font-size-2xl);
+        line-height: 120%;
+    }
+    .H3 {
+        font-size: var(--font-size-xl);
+        line-height: 120%;
+    }
+    .H6 {
+        font-size: var(--font-size-xl);
+        line-height: 120%;
+    }
+    body {
+        font-size: var(--font-size-sm);
+    }
+    .btn {
+        padding: 0.55rem 1.625rem;
+        font-size: var(--font-size-sm);
+    }
+}
